@@ -1471,6 +1471,23 @@ class MockupDesniToolbar extends Component {
         });
     }
 
+    promijeniBojuElementa(vrijednost) {
+        console.log("PROMJENA BOJE", vrijednost);
+        if (vrijednost === "") {
+            alert("Field cannot be empty!");
+        }
+        else {
+            if (vrijednost !== null && this.props.data.state.trenutnoOznaceniElement !== null) {
+                this.props.data.state.trenutnoOznaceniElement.style.backgroundColor = vrijednost;
+                this.props.data.setState({
+                    bojaElementa: vrijednost
+                })
+                //widthTextBox.value = trenutnoOznaceniElement.clientWidth;
+                //trenutnoOznaceniElement.dataset.sirinapikseli = true;
+            }
+        }
+    }
+
     render() {
         return (
             <Container id="desniToolbarOpcije">
@@ -1788,6 +1805,14 @@ class MockupDesniToolbar extends Component {
                     </Row>
                 </div>
 
+                <Row style={{ paddingTop: "1rem" }}>
+                    <FormLabel style={{ fontWeight: "bold" }}>Element color</FormLabel>
+                    <input type="color" defaultValue="#ffffff"
+                    value={this.props.data.state.bojaElementa}
+                    onChange={(e) => { this.promijeniBojuElementa(e.target.value) }}></input>
+
+                </Row>
+
 
                 <Row style={{ paddingTop: "1rem", borderBottom: "1px solid #ced4da" }}>
                     <ul id="listaDodatnihOpcija" ref={this.listaDodatnihOpcijaReferenca}>
@@ -1959,7 +1984,8 @@ class MockupDesniToolbar extends Component {
                         </InputGroup>
                     </ul>
                 </Row>
-                <Row style={{ paddingTop: "1rem" }}>
+                
+                {/*<Row style={{ paddingTop: "1rem" }}>
                     <ButtonGroup>
                         <Button variant="secondary"
                             id="ocitavanjeUdaljenosti"
@@ -2032,7 +2058,8 @@ class MockupDesniToolbar extends Component {
                             <i className="bi bi-display"></i>
                         </Button>
                     </ButtonGroup>
-                </Row>
+        </Row>*/}
+        
 
                 <GalenModal data={this} />
 

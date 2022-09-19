@@ -127,65 +127,16 @@ class MockupLijevo extends Component {
         return (
             <div id="lijevo" onClick={(e) => { this.kliknutoNaElementLijevo(e) }}>
                 <ul id="listaMockupa" ref={this.listaMockupaReferenca}>
-                    <li>
-                        <div id="dugme" className="dugmeKlasa" title="Button">
-                            <p style={{ marginTop: "1rem" }}>Button</p>
-                        </div>
+                    <li className='li-first'>
+                        <h4 className='hr-text'><span>Containers</span></h4>
                     </li>
-                    <li>
-                        <div id="labela" className="labelaKlasa" title="Label">
-                            <p id="pLabela">Label</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="link" className="linkKlasa" title="Link">
-                            <p id="pLink">Link</p>
-                        </div>
-                    </li>
+
                     <li id="divLi">
                         <div id="divElement" className="divElementKlasa" title="Div">
                             <p>Div</p>
                         </div>
                     </li>
-                    <li>
-                        <div id="naslov" className="naslovKlasa" title="Headline">
-                            <p id="pNaslov">Headline</p>
-                        </div>
-                    </li>
-                    <li id="slikaLi">
-                        <div id="slika" className="slikaKlasa" title="Image">
-                            <p id="pSlika">Image</p>
-                            <p>
-                                <img id="ikonaZaSliku" src="/ikonice/insert-picture-icon.png" alt="Insert" />
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div id="inputText" className="inputKlasa" title="Input">
-                            <p id="pInputText">Input</p>
-                        </div>
-                    </li>
-                    <li id="parLi">
-                        <div id="paragraf" className="paragrafKlasa" title="Paragraph">
-                            <p id="pParagraf">Paragraph</p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div id="spinner" className="spinnerKlasa" title="Number spinner">
-                            <p id="pSpinner">Number spinner</p>
-                            <div id="spinnerLi">
-                                <div id="spinnerStrelicaGoreDiv">
-                                    <span id="spinnerStrelicaGoreSpan">▴</span>
-                                </div>
-                                <div id="spinnerStrelicaDoljeDiv">
-                                    <span id="spinnerStrelicaDoljeSpan">▾</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li id="tabDio">
+                    <li id="tabDio" className='li-first'>
                         {/*<div id="tab" className="tabKlasa" title="Tabs">
                             
                             <ul id="tabLista" className="tabListaKlasa">
@@ -224,46 +175,17 @@ class MockupLijevo extends Component {
                             </TabContent>
                         </TabContent>
                     </li>
-                    <li id="noteLi">
-                        <div id="note" className="noteKlasa" title="Note">
-                            <p id="pNote">Note</p>
-                        </div>
+            
+                    
+                    <li className='li-first'>
+                        <h4 className='hr-text'><span>Buttons</span></h4>
                     </li>
+
                     <li>
-                        <div id="dropdown" className="dropdownKlasa" title="Dropdown">
-                            <p id="pDropdown">Dropdown</p>
-                            <div id="dropdownStrelicaDoljeDiv">
-                                <span id="dropdownStrelicaDoljeSpan">▾</span>
-                            </div>
+                        <div id="dugme" className="dugmeKlasa" title="Button">
+                            <p style={{ marginTop: "1rem" }}>Button</p>
                         </div>
-                    </li>
-
-                    <li id="tabelaLi">
-                        <div id="tabela" className="tabelaKlasa" title="Table">
-                            <table id="tabelaElement" className="tabelaElementKlasa">
-                                <thead>
-                                    <tr className="prviRedTabeleKlasa">
-                                        <th>Header 1</th>
-                                        <th>Header 2</th>
-                                        <th>Header 3</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Cell 1</td>
-                                        <td>Cell 2</td>
-                                        <td>Cell 3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cell 4</td>
-                                        <td>Cell 5</td>
-                                        <td>Cell 6</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </li>
-
+                    </li>                    
                     <li>
                         <div id="radioButton" className="radioButtonKlasa" title="Radio Button">
                             <ul id="radioButtonLista" className="radioButtonListaKlasa">
@@ -277,17 +199,79 @@ class MockupLijevo extends Component {
                         </div>
                     </li>
 
+
+                    <li className='li-first'>
+                        <h4 className='hr-text'><span>Input</span></h4>
+                    </li>
+
+                    <li>
+                        <div id="inputText" className="inputKlasa" title="Input">
+                            <p id="pInputText">Input</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="spinner" className="spinnerKlasa" title="Number spinner">
+                            <p id="pSpinner">Number spinner</p>
+                            <div id="spinnerLi">
+                                <div id="spinnerStrelicaGoreDiv">
+                                    <span id="spinnerStrelicaGoreSpan">▴</span>
+                                </div>
+                                <div id="spinnerStrelicaDoljeDiv">
+                                    <span id="spinnerStrelicaDoljeSpan">▾</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>                    
+                    <li>
+                        <div id="dropdown" className="dropdownKlasa" title="Dropdown">
+                            <p id="pDropdown">Dropdown</p>
+                            <div id="dropdownStrelicaDoljeDiv">
+                                <span id="dropdownStrelicaDoljeSpan">▾</span>
+                            </div>
+                        </div>
+                    </li>
                     <li>
                         <div id="checkbox" className="checkboxKlasa" title="Checkbox">
                             <ul id="checkboxLista" className="checkboxListaKlasa">
                                 <li className="checkboxNeoznacena">
                                     option1
-              </li>
+                                </li>
                                 <li className="checkboxOznacena">
                                     option2
-              </li>
+                                </li>
                             </ul>
                         </div>
+                    </li>
+
+
+                    <li className='li-first'>
+                        <h4 className='hr-text'><span>Text elements</span></h4>
+                    </li>
+
+                    <li>
+                        <div id="labela" className="labelaKlasa" title="Label">
+                            <p id="pLabela">Label</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="link" className="linkKlasa" title="Link">
+                            <p id="pLink">Link</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="naslov" className="naslovKlasa" title="Headline">
+                            <p id="pNaslov">Headline</p>
+                        </div>
+                    </li>
+                    <li id="parLi">
+                        <div id="paragraf" className="paragrafKlasa" title="Paragraph">
+                            <p id="pParagraf">Paragraph</p>
+                        </div>
+                    </li>
+
+
+                    <li className='li-first'>
+                        <h4 className='hr-text'><span>Lists</span></h4>
                     </li>
 
                     <li>
@@ -312,6 +296,81 @@ class MockupLijevo extends Component {
                             </div>
                         </div>
                     </li>
+
+
+
+                    <li className='li-first'>
+                        <h4 className='hr-text'><span>Other elements</span></h4>
+                    </li>
+
+                    <li id="slikaLi">
+                        <div id="slika" className="slikaKlasa" title="Image">
+                            <p id="pSlika">Image</p>
+                            <p>
+                                <img id="ikonaZaSliku" src="/ikonice/insert-picture-icon.png" alt="Insert" />
+                            </p>
+                        </div>
+                    </li>
+
+                    
+                    <li id="noteLi">
+                        <div id="note" className="noteKlasa" title="Note">
+                            <p id="pNote">Note</p>
+                        </div>
+                    </li>
+                    
+                    <li id="tabelaLi">
+                        <div id="tabela" className="tabelaKlasa" title="Table">
+                            <table id="tabelaElement" className="tabelaElementKlasa">
+                                <thead>
+                                    <tr className="prviRedTabeleKlasa">
+                                        <th>Header 1</th>
+                                        <th>Header 2</th>
+                                        <th>Header 3</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Cell 1</td>
+                                        <td>Cell 2</td>
+                                        <td>Cell 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cell 4</td>
+                                        <td>Cell 5</td>
+                                        <td>Cell 6</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>   
+
+                    <li id="slikaLi">
+                        <div id="slika" className="slikaKlasa" title="Image">
+                            <p id="pSlika">Image</p>
+                            <p>
+                                <img id="ikonaZaSliku" src="/ikonice/insert-picture-icon.png" alt="Insert" />
+                            </p>
+                        </div>
+                    </li>            
+
+                    <li id="audioLi">
+                        <div id="audioPlayer" className="audioPlayerKlasa" title="Audio player">
+                            <p>
+                                <img id="ikonaZaAudioPlayer" src="/ikonice/audio-player.png" alt="Audio player" style={{padding:"20px 20px 0px 20px"}} />
+                            </p>                            
+                        </div>
+                    </li>
+
+                    <li id="videoLi">
+                        <div id="videoPlayer" className="videoPlayerKlasa" title="Video player">
+                            <p>
+                                <img id="ikonaZaVideoPlayer" src="/ikonice/video-player.png" alt="Video player" style={{padding:"20px 20px 0px 20px"}}/>
+                            </p>
+                        </div>
+                    </li>
+
+                               
                 </ul>
             </div>
         );

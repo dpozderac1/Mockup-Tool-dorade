@@ -26,6 +26,7 @@ import {
     kreirajNovuVertikalnuListu, kreirajNovuHorizontalnuListu
 } from "../js/kreiranjeElemenata";
 import { FormControl, Offcanvas } from "react-bootstrap";
+import Zaglavlje from './zaglavlje';
 
 class MockupCitav extends Component {
     constructor() {
@@ -154,7 +155,8 @@ class MockupCitav extends Component {
         nizJedanUnutarDrugog: [],
         listaMockupa: null,
         searchBoxText: "",
-        prikazDesnogToolbara: false
+        prikazDesnogToolbara: false,
+        bojaElementa: null
     }
 
     componentDidMount() {
@@ -632,13 +634,16 @@ class MockupCitav extends Component {
         return (<>
             <Row>
                 <Col xs="3" style={{ padding: "0px", borderRight: "1px solid #ced4da" }}>
-                    <InputGroup className="p-3" style={{ borderBottom: "1px solid #ced4da", background: "#6c757d" }}>
+                    <Zaglavlje data={this}></Zaglavlje>
+                    
+                    <InputGroup className="p-3" style={{ borderBottom: "1px solid #ced4da", background: "#6c757d"}}>
                         <FormControl ref={this.searchTextBoxReferenca}
                             id="searchText"
                             placeholder="Search"
                             value={this.state.searchBoxText}
                             onChange={(e) => { this.promjenaSearchTexta(e) }}
                             type={'search'}
+                            style={{marginLeft: "20px" }}
                         />
                         <Button variant="outline-secondary"
                             style={{ background: "#ced4da", borderColor: "#ced4da" }}

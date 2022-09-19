@@ -190,6 +190,24 @@ class MockupGlavni extends Component {
             this.props.data.state.dodatneOpcijeElementi.topUdaljenost = offset(this.props.data.state.trenutnoOznaceniElement).top;
             this.props.data.state.dodatneOpcijeElementi.leftUdaljenost = offset(this.props.data.state.trenutnoOznaceniElement).left;
 
+            //prikaz boje elementa            
+            function componentToHex(c) {
+                let hex = c.toString(16);
+                return hex.length == 1 ? "0" + hex : hex;
+            }
+
+            function rgbToHex(r, g, b) {
+                return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+              }
+
+            let boja = window.getComputedStyle(this.props.data.state.trenutnoOznaceniElement).getPropertyValue("background-color").toString();
+            boja = boja.replace("rgb", "");
+            boja = boja.replace("(", "");
+            boja = boja.replace(")", "");
+            
+            let nizBoja = boja.split(/\s*,\s*/);
+            this.props.data.state.bojaElementa = rgbToHex(parseInt(nizBoja[0]),parseInt(nizBoja[1]),parseInt(nizBoja[2]));
+
             //omogucavanje dodatnih elemenata Toolbara
             let sveDodatneOpcije = this.props.data.state.dodatneOpcijeElementi.listaDodatnihOpcija.getElementsByTagName("li");
             for (let i = 0; i < sveDodatneOpcije.length; i++) {

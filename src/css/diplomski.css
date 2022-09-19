@@ -135,6 +135,8 @@ horizontal ul > li {
 #divElement:active,
 #naslov:active,
 #slika:active,
+#audioPlayer:active,
+#videoPlayer:active,
 #tab:active,
 #radioButton:active {
   box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
@@ -220,6 +222,8 @@ select {
 #dugme:hover,
 #divElement:hover,
 #slika:hover,
+#audioPlayer:hover,
+#videoPlayer:hover,
 #inputText:hover,
 #spinner:hover,
 #tab:hover,
@@ -238,6 +242,10 @@ select {
   text-align: center;
   pointer-events: none;
   margin: auto;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #pLink {
@@ -248,6 +256,10 @@ select {
   pointer-events: none;
   margin: auto;
   text-decoration: underline;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .divElementKlasa {
@@ -349,6 +361,13 @@ select {
   pointer-events: none;
   /*margin-top: 4%;*/
   margin: 0px;
+}
+
+#pParagraf{
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #pParagraf,
@@ -695,8 +714,9 @@ select {
   height: 100vh;
   width: 20%;
   right: 0;
-  background: #eeeeee;
-  border-left: 1px solid black;
+  /*background: #eeeeee;*/
+  background-color: white;
+  /* border-left: 1px solid black;*/
   /*display: none;*/
   overflow: scroll;
   top: 0%;
@@ -933,6 +953,8 @@ select {
   margin-top: 2.3%;*/
   border-bottom: 1px rgb(52, 74, 95) solid;
 }
+
+
 
 #listaMockupa {
   margin-top: 0;
@@ -1187,3 +1209,42 @@ input[type="checkbox"]:checked::before {
 input[type="checkbox"]:checked ~ label::before {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+
+.hr-text {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  
+}
+
+.hr-text span{
+  background-color: #e9ecef;
+  padding: 0 10px;
+  color: #000;
+}
+
+.li-first {
+  border-bottom: 0px solid #ced4da !important;
+  margin-bottom: -25px !important;
+}
+
+.audioPlayerKlasa{
+  display: inline-block;
+  border: none;
+  background: transparent;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.videoPlayerKlasa{
+  display: inline-block;
+  border: none;
+  background: transparent;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
